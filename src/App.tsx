@@ -5,7 +5,7 @@ import Home from "./scenes/home";
 import Benefits from "./scenes/benefits";
 import OurClasses from "@/scenes/ourClasses";
 import ContactUs from "@/scenes/contactUs"
-
+import Footer from "./scenes/footer/footer";
 
 function App() {
   const [selectedPage, setSelectedPage]=useState<SelectedPage>(
@@ -59,6 +59,9 @@ function App() {
 
       { /*contactus page  */}
       <ContactUs setSelectedPage={setSelectedPage} />
+
+      { /*footer section  */}
+      <Footer/>
 
     </div>
   );
