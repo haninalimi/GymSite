@@ -15,10 +15,6 @@ type Props = {
 }
 
 
-
-
-
-
 const Home = ({setSelectedPage}: Props) => {
     const isAboveMediumScreens = useMediaQuery("(min-width:1060px)")
   return <section
@@ -26,7 +22,9 @@ const Home = ({setSelectedPage}: Props) => {
   className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0"
   >
     { /*IMAGE AND  MAIN HEADER*/}
-    <div className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6">
+    <motion.div 
+    className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
+    onViewportEnter={()=> setSelectedPage(SelectedPage.Home)}>
         {/*MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5">
             { /* HEADINGS */}
@@ -80,7 +78,7 @@ const Home = ({setSelectedPage}: Props) => {
             <img alt="home-pageGraphic" src={HomePageGraphic} />
 
         </div>
-    </div>
+    </motion.div>
 
 
 
